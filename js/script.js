@@ -14,20 +14,20 @@ function getPlayerChoice() {
 
 function playRound(playerSelection, computerSelection) {
     if (playerSelection.toLowerCase() === "rock" && computerSelection === "scissors") {
-            alert("You win!")
+            return "You win!"
     } else if (playerSelection.toLowerCase() === "scissors" && computerSelection === "paper") {
-            alert("You win!")
+            return "You win!"
     } else if (playerSelection.toLowerCase() === "paper" && computerSelection === "rock") {
-            alert("You win!")
+            return "You win!"
     } else if (playerSelection.toLowerCase() === "rock" && computerSelection === "paper") {
-            alert("You lose!")
+            return "You lose!"
     } else if (playerSelection.toLowerCase() === "paper" && computerSelection === "rock") {
-            alert("You lose!")
+            return "You lose!"
     } else if (playerSelection.toLowerCase() === "scissors" && computerSelection === "rock") {
-            alert("You lose!")
+            return "You lose!"
     } else if (playerSelection.toLowerCase() === computerSelection) {
-            alert("It's a draw!")
+            return "It's a draw!"
     } else {
-            alert("Please choose rock, paper, or scissors.")
+            return "Please choose rock, paper, or scissors."
     }
 }

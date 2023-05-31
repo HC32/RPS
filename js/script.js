@@ -4,15 +4,15 @@ function getComputerChoice() {
     return array[Math.floor(Math.random() * array.length)]
 }
 
-let computerSelection = getComputerChoice()
 
-let playerSelection = prompt("Do you want to throw rock, paper, or scissors?")
 
 let playerScore = 0
 
 let computerScore = 0
 
 function playRound() {
+        let playerSelection = prompt("Do you want to throw rock, paper, or scissors?");
+        let computerSelection = getComputerChoice();
     if (playerSelection === "rock" && computerSelection === "scissors") {
         playerScore += 1;
         console.log(`Rock beats scissors! You win! \n Player: ${playerScore} \n Computer: ${computerScore}`);
@@ -34,6 +34,12 @@ function playRound() {
     } else if (playerSelection === computerSelection) {
         console.log(`You both picked ${playerSelection}! It's a draw!  \n Player: ${playerScore} \n Computer: ${computerScore}`);
     } else {
-            return "Please choose rock, paper, or scissors."
+        console.log(`Please choose rock, paper, or scissors. \n Player: ${playerScore} \n Computer: ${computerScore}`);
     }
+}
+
+function game() {
+        for (let i = 0; i < 5; i++) {
+                playRound()
+        }
 }

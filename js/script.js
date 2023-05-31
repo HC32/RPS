@@ -8,21 +8,31 @@ let computerSelection = getComputerChoice()
 
 let playerSelection = prompt("Do you want to throw rock, paper, or scissors?")
 
+let playerScore = 0
+
+let computerScore = 0
+
 function playRound() {
     if (playerSelection === "rock" && computerSelection === "scissors") {
-        console.log("Rock beats scissors! You win!")
+        playerScore += 1;
+        console.log(`Rock beats scissors! You win! \n Player: ${playerScore} \n Computer: ${computerScore}`);
     } else if (playerSelection === "scissors" && computerSelection === "paper") {
-        console.log("Scissors beats paper! You win!")
+        playerScore += 1;
+        console.log(`Scissors beats paper! You win! \n Player: ${playerScore} \n Computer: ${computerScore}`);
     } else if (playerSelection === "paper" && computerSelection === "rock") {
-        console.log("Paper beats rock! You win!")
+        playerScore += 1;
+        console.log(`Paper beats rock! You win! \n Player: ${playerScore} \n Computer: ${computerScore}`);
     } else if (playerSelection === "rock" && computerSelection === "paper") {
-        console.log("Paper beats rock! You lose!")
+        computerScore += 1;
+        console.log(`Paper beats rock! You lose! \n Player: ${playerScore} \n Computer: ${computerScore}`);
     } else if (playerSelection === "paper" && computerSelection === "rock") {
-        console.log("Scissors beats paper! You lose!")
+        computerScore += 1;
+        console.log(`Scissors beats paper! You lose! \n Player: ${playerScore} \n Computer: ${computerScore}`);
     } else if (playerSelection === "scissors" && computerSelection === "rock") {
-        console.log("Rock beats scissors! You lose!")
+        computerScore += 1;
+        console.log(`Rock beats scissors! You lose! \n Player: ${playerScore} \n Computer: ${computerScore}`);
     } else if (playerSelection === computerSelection) {
-        console.log(`You both picked ${playerSelection}! It's a draw!`)
+        console.log(`You both picked ${playerSelection}! It's a draw!  \n Player: ${playerScore} \n Computer: ${computerScore}`);
     } else {
             return "Please choose rock, paper, or scissors."
     }

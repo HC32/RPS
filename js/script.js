@@ -32,8 +32,6 @@ function playRound() {
         computerScore += 1;
         console.log(`Rock beats scissors! You lose! \n Player: ${playerScore} \n Computer: ${computerScore}`);
     } else if (playerSelection === computerSelection) {
-        playerScore += 1;
-        computerScore += 1;
         console.log(`You both picked ${playerSelection}! It's a draw!  \n Player: ${playerScore} \n Computer: ${computerScore}`);
     } else {
         console.log(`Please choose rock, paper, or scissors. \n Player: ${playerScore} \n Computer: ${computerScore}`);
@@ -41,10 +39,10 @@ function playRound() {
 }
 
 function game() {
-        for (let i = 0; i < 5; i++) {
-                playRound() 
+    while ((playerScore < 3) && (computerScore < 3)) {
+            playRound()
         }
-        winner();
+    winner()
 }
 
 function winner() {

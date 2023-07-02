@@ -70,13 +70,3 @@ function playRound() {
         results.textContent = `Player: ${playerScore} \n Computer: ${computerScore}`;
     }
 }
-
-function winner() {
-        if (playerScore > computerScore) {
-                console.log(`You win ${playerScore}-${computerScore}!`)
-        } else if (playerScore < computerScore) {
-                console.log(`You lose ${computerScore}-${playerScore}!`)
-        } else {
-                console.log(`The score is ${playerScore}-${computerScore}, it's a draw!`)
-        }
-}
